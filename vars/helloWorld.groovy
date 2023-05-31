@@ -1,4 +1,4 @@
-def call(String name,String weekday) {
+def call(Map config = [:]) {
     loadLinuxScript(name: 'helloworld.sh')
-    sh "./helloworld.sh ${name} ${weekday}"
+    sh "./helloworld.sh ${config.name} ${config.weekday}"
 }
